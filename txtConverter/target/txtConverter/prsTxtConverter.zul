@@ -1,0 +1,19 @@
+<?page title="User management" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <window title="Txt Converter" border="normal" width="100%"
+            apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm') @init('com.comphand.viewmodel.TxtConverterVM')"
+            onRightClick="false">
+        <groupbox mold="3d">
+            <radiogroup id="rbKaryawan" selectedItem="@bind(vm.strSelected)">
+                <radio id="rbSemuaKaryawan" label="All Employee" radiogroup="rbKaryawan" value="0" />
+                <radio id="rbPilihKaryawan" label="GL Process" radiogroup="rbKaryawan" value="1" />
+            </radiogroup>
+            <separator/>
+            Upload File : <textbox readonly="true" value="@bind(vm.strFileName)"/>
+            <button label="Browse" upload="true, native" onUpload="@command('browseFile')"/>
+            <html><br/></html>
+            <button label="Upload" onClick="@command('uploadFile')"/>
+        </groupbox>
+    </window>
+</zk>

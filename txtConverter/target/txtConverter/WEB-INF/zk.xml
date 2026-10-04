@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+    <!-- Lets ZK ViewModels' @WireVariable fields resolve to beans defined
+         in applicationContext.xml (loaded by web.xml's ContextLoaderListener) -->
+    <variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver" />
+
+    <desktop-config>
+        <max-async-requests-per-session>200</max-async-requests-per-session>
+    </desktop-config>
+</zk>

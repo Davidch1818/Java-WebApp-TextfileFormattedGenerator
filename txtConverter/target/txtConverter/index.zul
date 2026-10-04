@@ -1,0 +1,44 @@
+<?page title="User management" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <window title="User management" border="normal" width="640px"
+            apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm') @init('com.comphand.viewmodel.UserViewModel')">
+
+        <vlayout>
+
+            <hlayout spacing="8px">
+                <a href="index.zul">Users</a>
+                <label value=" | " />
+                <a href="products.zul">Products</a>
+            </hlayout>
+
+            <hlayout valign="middle" spacing="8px">
+                <textbox value="@bind(vm.newUser.username)" placeholder="Username" />
+                <textbox value="@bind(vm.newUser.email)" placeholder="Email" />
+                <button label="Add user" onClick="@command('createUser')" />
+            </hlayout>
+
+            <listbox model="@bind(vm.users)" height="300px" mold="paging" pageSize="10">
+                <listhead>
+                    <listheader label="ID" width="60px" />
+                    <listheader label="Username" />
+                    <listheader label="Email" />
+                    <listheader label="" width="90px" />
+                </listhead>
+                <template name="model" var="u">
+                    <listitem>
+                        <listcell label="@bind(u.id)" />
+                        <listcell label="@bind(u.username)" />
+                        <listcell label="@bind(u.email)" />
+                        <listcell>
+                            <button label="Delete" onClick="@command('deleteUser', user=u)" />
+                        </listcell>
+                    </listitem>
+                </template>
+            </listbox>
+
+            <label value="@bind(vm.statusMessage)" style="color:#666" />
+
+        </vlayout>
+    </window>
+</zk>
