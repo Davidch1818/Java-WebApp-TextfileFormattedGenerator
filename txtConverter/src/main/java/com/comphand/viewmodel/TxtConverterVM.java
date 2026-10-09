@@ -204,39 +204,39 @@ public class TxtConverterVM {
                     }
                     else if(shft.getKode().contains("WITH"))
                     {
-                        kodeGL="81300700023300005000";
+                        kodeGL="8130070002330000500";
                     }
                     else if(shft.getKode().contains("WAIV"))
                     {
-                        kodeGL="21304637214000005000";
+                        kodeGL="2130463721400005000";
                     }
                     else if(shft.getKode().contains("LLD1")||shft.getKode().contains("RTTT"))
                     {
-                        kodeGL="42352532576527377280";
+                        kodeGL="4235253257652377280";
                     }
                     else if(shft.getKode().contains("EQUI"))
                     {
-                        kodeGL="74382768264234215515";
+                        kodeGL="7438276824234215515";
                     }
                     else if(shft.getKode().contains("LOSS"))
                     {
-                        kodeGL="24342470077007070716";
+                        kodeGL="2434247007700707071";
                     }
                     else if(shft.getKode().contains("2RDM"))
                     {
-                        kodeGL="88675865221324656200";
+                        kodeGL="8865865221324656200";
                     }
                     else if(shft.getKode().contains("BPCR"))
                     {
-                        kodeGL="53425237235721007004";
+                        kodeGL="5342523723572107004";
                     }
                     else if(shft.getKode().contains("PTAB"))
                     {
-                        kodeGL="34253245700575837266";
+                        kodeGL="3425324570057587266";
                     }
                     else if(shft.getKode().contains("PGIT"))
                     {
-                        kodeGL="47273247342734278005";
+                        kodeGL="4727324734273427805";
                     }
                     
                     if(shft.getTanda().equals("+"))
